@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #606172;
+}
+
+/* :root {
+    --canvas-width: px;
+    --canvas-height: 1px;
+} */
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    background-color: #606172;
+}
+
+#board {
+    outline: 5px solid 'rgb(100, 100, 100)';
+    background-color: rgb(224, 224, 224);
+    display: block;
+    margin: 50px auto;
+}
+
+#currentLevel {
+    font-size: 1.5rem;
+    height: min-content;
+    width: fit-content;
+    display: inline-block;
+    margin: 20px;
+}
+
+.restart {
+    color: white;
+    font-weight: 900;
+    font-size: 1.2rem;
+    float: right;
+    margin: 10px 20px;
+    padding: 10px;
+}
+
+#joyStick {
+    width: 150px;
+    aspect-ratio: 1;
+    border: 5px solid black;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border-radius: 50%;
+}
+
+#joyStick #stick {
+    width: 33%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+}
+
+@media (width <= 501px) {
+    #board {
+        width: 80vmin;
+        position: absolute;
+        top: 4%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
